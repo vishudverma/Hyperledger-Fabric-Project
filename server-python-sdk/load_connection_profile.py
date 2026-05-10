@@ -1,6 +1,6 @@
 from hfc.fabric import Client
 
-cli = Client(net_profile="test/fixtures/network.json")
+cli = Client(net_profile="../fabric-sdk-py/test/fixtures/network.json")
 
 print(cli.organizations)
 print(cli.peers)
