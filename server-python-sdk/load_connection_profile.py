@@ -1,9 +1,13 @@
 import os
 from hfc.fabric import Client
 
-# file = os.path.abspath("../test/fixtures/network.json")
+current_dir = os.path.dirname(__file__)
 
-cli = Client(net_profile="/test/fixtures/network.json")
+network_file = os.path.join(
+    current_dir, "..", "fabric-sdk-py", "test", "fixtures", "network.json"
+)
+
+cli = Client(net_profile=network_file)
 
 print(cli.organizations)
 print(cli.peers)
