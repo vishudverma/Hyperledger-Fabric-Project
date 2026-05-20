@@ -1,5 +1,6 @@
 import json
 import os
+
 from hfc.fabric_ca.caservice import CAService
 
 
@@ -14,6 +15,7 @@ def main():
     net_path = find_file("connection-org1.json", os.getcwd())
     if not net_path:
         print("There is no connection-org1.json file available.")
+        return
     with open(net_path) as file:
         ccp = json.load(file)
 
@@ -25,8 +27,10 @@ def main():
 
     casvc = CAService(target=ca_url, ca_certs_path=ca_cert_path)
     admin = casvc.enroll("admin", "adminpw")
-    # Until this point we create admin for org1
-    print(admin)
+
+    print(
+        admin
+    )  # This ensures that that admin is created with correct credentials as was expected.
 
 
 if __name__ == "__main__":
