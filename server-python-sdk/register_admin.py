@@ -28,9 +28,7 @@ def main():
     casvc = CAService(target=ca_url, ca_certs_path=ca_cert_path)
     admin = casvc.enroll("admin", "adminpw")
 
-    print(
-        admin
-    )  # This ensures that that admin is created with correct credentials as was expected.
+    return admin  # This ensures that that admin is created with correct credentials as was expected.
 
 
 if __name__ == "__main__":
