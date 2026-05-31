@@ -2,9 +2,10 @@
 
 ## Tech stack
 
-    - Hyperledger Fabric blockchain (Node SDK JavaScript)
-    - Node.js
-    - Next.js
+    - Hyperledger Fabric blockchain (Python SDK)
+	- Python
+	- Flask
+	- Fast API
     - IPFS
 
 <!-- ADD github access 
