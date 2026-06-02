@@ -2,13 +2,7 @@ import json
 import os
 
 from hfc.fabric_ca.caservice import CAService
-
-
-def find_file(filename: str, search_path: str):
-    for dirpath, _, filenames in os.walk(search_path):
-        if filename in filenames:
-            return os.path.join(dirpath, filename)
-    return None
+from find_file import find_file  # pyright: ignore
 
 
 def main():
